@@ -24,11 +24,16 @@ namespace Prototype2
 
         private void button1_Click(object sender, EventArgs e) ///Sign in button
         {
-            if (textBox1.Text == Setup.emp1.GetEmpID().ToString())
+            List<Employee> employees = EmployeeFileIO.GetEmployeeList();
+            foreach (Employee m in employees)
             {
-                Form2 form2 = new Form2();
-                form2.Show();
-                this.Visible = false;
+                if (textBox1.Text == m.GetEmpID().ToString())
+                {
+                    Setup.selectedEmployee = m;
+                    Form2 form2 = new Form2();
+                    form2.Show();
+                    this.Visible = false;
+                }
             }
         }
     }

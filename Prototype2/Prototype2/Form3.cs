@@ -15,6 +15,8 @@ namespace Prototype2
         private bool side1isCollapsed;
         private bool side2isCollapsed;
         private bool side3isCollapsed;
+        private bool side4isCollapsed;
+        private bool side5isCollapsed;
         public Form3()
         {
             InitializeComponent();
@@ -23,6 +25,8 @@ namespace Prototype2
             button1.Text = "Soup/Salads";
             button6.Text = "Entrees";
             button12.Text = "Drinks";
+            button20.Text = "Desserts";
+            button25.Text = "Appetizers";
             ///Menu item buttons in the drop downs
             button2.Text = Setup.soup1.GetItemName();
             button3.Text = Setup.salad1.GetItemName();
@@ -36,6 +40,15 @@ namespace Prototype2
             button14.Text = Setup.drink2.GetItemName();
             button15.Text = Setup.drink3.GetItemName();
             button16.Text = Setup.drink4.GetItemName();
+            button19.Text = Setup.soup2.GetItemName();
+            button21.Text = Setup.dessert1.GetItemName();
+            button22.Text = Setup.dessert2.GetItemName();
+            button23.Text = Setup.dessert3.GetItemName();
+            button24.Text = Setup.dessert4.GetItemName();
+            button26.Text = Setup.appetizer1.GetItemName();
+            button27.Text = Setup.appetizer2.GetItemName();
+            button28.Text = Setup.appetizer3.GetItemName();
+            button29.Text = Setup.appetizer4.GetItemName();
             label3.Hide();
             label4.Hide();
             label5.Hide();
@@ -128,7 +141,11 @@ namespace Prototype2
             }
         }
         /// <summary>
-        /// below are for each menu item to make the item information appear
+        /// 
+        /// 
+        /// EVERYTHING below is for each menu item to make the item information appear
+        /// 
+        /// 
         /// </summary>
 
 
@@ -363,13 +380,232 @@ namespace Prototype2
         {
             Item i = Setup.selectedItem;
             Setup.selectedTable.AddToBill(i);
-            label6.Show();
+            if (Setup.selectedItem != null) label6.Show();
         }
 
         private void button18_Click(object sender, EventArgs e)
         {
+            label6.Hide();
             Form4 form4 = new Form4();
             form4.Show();
+        }
+
+        private void timer4_Tick(object sender, EventArgs e)
+        {
+            if (side4isCollapsed)
+            {
+                Side4DropDown.Height += 10;
+                if (Side4DropDown.Size == Side4DropDown.MaximumSize)
+                {
+                    timer4.Stop();
+                    side4isCollapsed = false;
+                }
+            }
+            else
+            {
+                Side4DropDown.Height -= 10;
+                if (Side4DropDown.Size == Side4DropDown.MinimumSize)
+                {
+                    timer4.Stop();
+                    side4isCollapsed = true;
+                }
+            }
+        }
+
+        private void timer5_Tick(object sender, EventArgs e)
+        {
+            if (side5isCollapsed)
+            {
+                Side5DropDown.Height += 10;
+                if (Side5DropDown.Size == Side5DropDown.MaximumSize)
+                {
+                    timer5.Stop();
+                    side5isCollapsed = false;
+                }
+            }
+            else
+            {
+                Side5DropDown.Height -= 10;
+                if (Side5DropDown.Size == Side5DropDown.MinimumSize)
+                {
+                    timer5.Stop();
+                    side5isCollapsed = true;
+                }
+            }
+        }
+
+        private void button20_Click(object sender, EventArgs e) ///Dessert item category
+        {
+            label6.Hide();
+            timer4.Start();
+        }
+
+        private void button25_Click(object sender, EventArgs e) ///Appetizer items category
+        {
+            label6.Hide();
+            timer5.Start();
+        }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            Setup.selectedItem = Setup.soup2;
+            label3.Show();
+            label4.Show();
+            label5.Show();
+            label3.Text = Setup.soup2.GetItemName();
+            label4.Text = "$" + Setup.soup2.GetItemPrice().ToString();
+            if (Setup.soup2.IsAvailable())
+            {
+                label5.Text = "This item is available";
+            }
+            else
+            {
+                label5.Text = "This item is currently unavailable...";
+            }
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            Setup.selectedItem = Setup.dessert1;
+            label3.Show();
+            label4.Show();
+            label5.Show();
+            label3.Text = Setup.dessert1.GetItemName();
+            label4.Text = "$" + Setup.dessert1.GetItemPrice().ToString();
+            if (Setup.dessert1.IsAvailable())
+            {
+                label5.Text = "This item is available";
+            }
+            else
+            {
+                label5.Text = "This item is currently unavailable...";
+            }
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            Setup.selectedItem = Setup.dessert2;
+            label3.Show();
+            label4.Show();
+            label5.Show();
+            label3.Text = Setup.dessert2.GetItemName();
+            label4.Text = "$" + Setup.dessert2.GetItemPrice().ToString();
+            if (Setup.dessert2.IsAvailable())
+            {
+                label5.Text = "This item is available";
+            }
+            else
+            {
+                label5.Text = "This item is currently unavailable...";
+            }
+        }
+
+        private void button23_Click(object sender, EventArgs e)
+        {
+            Setup.selectedItem = Setup.dessert3;
+            label3.Show();
+            label4.Show();
+            label5.Show();
+            label3.Text = Setup.dessert3.GetItemName();
+            label4.Text = "$" + Setup.dessert3.GetItemPrice().ToString();
+            if (Setup.dessert3.IsAvailable())
+            {
+                label5.Text = "This item is available";
+            }
+            else
+            {
+                label5.Text = "This item is currently unavailable...";
+            }
+        }
+
+        private void button24_Click(object sender, EventArgs e)
+        {
+            Setup.selectedItem = Setup.dessert4;
+            label3.Show();
+            label4.Show();
+            label5.Show();
+            label3.Text = Setup.dessert4.GetItemName();
+            label4.Text = "$" + Setup.dessert4.GetItemPrice().ToString();
+            if (Setup.dessert4.IsAvailable())
+            {
+                label5.Text = "This item is available";
+            }
+            else
+            {
+                label5.Text = "This item is currently unavailable...";
+            }
+        }
+
+        private void button26_Click(object sender, EventArgs e)
+        {
+            Setup.selectedItem = Setup.appetizer1;
+            label3.Show();
+            label4.Show();
+            label5.Show();
+            label3.Text = Setup.appetizer1.GetItemName();
+            label4.Text = "$" + Setup.appetizer1.GetItemPrice().ToString();
+            if (Setup.appetizer1.IsAvailable())
+            {
+                label5.Text = "This item is available";
+            }
+            else
+            {
+                label5.Text = "This item is currently unavailable...";
+            }
+        }
+
+        private void button27_Click(object sender, EventArgs e)
+        {
+            Setup.selectedItem = Setup.appetizer2;
+            label3.Show();
+            label4.Show();
+            label5.Show();
+            label3.Text = Setup.appetizer2.GetItemName();
+            label4.Text = "$" + Setup.appetizer2.GetItemPrice().ToString();
+            if (Setup.appetizer2.IsAvailable())
+            {
+                label5.Text = "This item is available";
+            }
+            else
+            {
+                label5.Text = "This item is currently unavailable...";
+            }
+        }
+
+        private void button28_Click(object sender, EventArgs e)
+        {
+            Setup.selectedItem = Setup.appetizer3;
+            label3.Show();
+            label4.Show();
+            label5.Show();
+            label3.Text = Setup.appetizer3.GetItemName();
+            label4.Text = "$" + Setup.appetizer3.GetItemPrice().ToString();
+            if (Setup.appetizer3.IsAvailable())
+            {
+                label5.Text = "This item is available";
+            }
+            else
+            {
+                label5.Text = "This item is currently unavailable...";
+            }
+        }
+
+        private void button29_Click(object sender, EventArgs e)
+        {
+            Setup.selectedItem = Setup.appetizer4;
+            label3.Show();
+            label4.Show();
+            label5.Show();
+            label3.Text = Setup.appetizer4.GetItemName();
+            label4.Text = "$" + Setup.appetizer4.GetItemPrice().ToString();
+            if (Setup.appetizer4.IsAvailable())
+            {
+                label5.Text = "This item is available";
+            }
+            else
+            {
+                label5.Text = "This item is currently unavailable...";
+            }
         }
     }
 }
