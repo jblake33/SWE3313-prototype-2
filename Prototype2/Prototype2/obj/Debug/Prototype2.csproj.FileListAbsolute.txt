@@ -1,0 +1,12 @@
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.csprojAssemblyReference.cache
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.Form1.resources
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.Form2.resources
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.Properties.Resources.resources
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.csproj.GenerateResource.cache
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.csproj.CoreCompileInputs.cache
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\bin\Debug\Prototype2.exe.config
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\bin\Debug\Prototype2.exe
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\bin\Debug\Prototype2.pdb
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.exe
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.pdb
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.Form3.resources
