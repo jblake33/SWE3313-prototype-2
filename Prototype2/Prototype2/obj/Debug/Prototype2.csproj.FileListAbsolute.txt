@@ -10,3 +10,4 @@ C:\Users\jcb13\source\repos\Prototype2\Prototype2\bin\Debug\Prototype2.pdb
 C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.exe
 C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.pdb
 C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.Form3.resources
+C:\Users\jcb13\source\repos\Prototype2\Prototype2\obj\Debug\Prototype2.Form4.resources
