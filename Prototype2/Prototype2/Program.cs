@@ -141,7 +141,7 @@ namespace Prototype2
             List<Employee> list = new List<Employee>();
             try
             {
-                FileStream fs = new FileStream("emplist.txt", FileMode.OpenOrCreate, FileAccess.Read);
+                FileStream fs = new FileStream(@"This PC\Desktop\emplist.txt", FileMode.OpenOrCreate, FileAccess.Read);
                 StreamReader sr = new StreamReader(fs);
                 while (!sr.EndOfStream)
                 {
